@@ -61,7 +61,7 @@ public class WikipediaAndroidTests extends TestBase{
         });
 
         step("Ввод значения Email", () -> {
-            $(AppiumBy.id("//android.widget.EditText[@text='Email (Optional)']")).click();
+            $(AppiumBy.xpath("//android.widget.EditText[@text='Email (Optional)']")).click();
             $(AppiumBy.xpath("//android.widget.EditText[@text='Email (Optional)']")).sendKeys(faker.internet().emailAddress());
         });
 
