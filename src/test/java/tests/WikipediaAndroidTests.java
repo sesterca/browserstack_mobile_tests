@@ -47,7 +47,7 @@ public class WikipediaAndroidTests extends TestBase{
 
         step("Ввод значения Username", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/create_account_username")).click();
-            $(AppiumBy.xpath("//android.widget.EditText[@text='Username']")).sendKeys(faker.address().firstName());
+            $(AppiumBy.xpath("//android.widget.EditText[@text='Username']")).sendKeys("tycanity");
         });
 
         step("Ввод значения Password", () -> {
