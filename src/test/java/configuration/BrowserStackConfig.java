@@ -2,7 +2,7 @@ package configuration;
 
 import org.aeonbits.owner.Config;
 
-@Config.Sources("credentials.properties")
+@Config.Sources({"classpath:credentials.properties"})
 public interface BrowserStackConfig extends Config {
     @Key("user")
     String browserStackUser();
@@ -18,4 +18,7 @@ public interface BrowserStackConfig extends Config {
 
     @Key("os_version")
     String os();
+
+    @Key("browserstack_url")
+    String url();
 }
