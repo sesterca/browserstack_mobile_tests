@@ -1,6 +1,7 @@
 package tests;
 
 import io.appium.java_client.AppiumBy;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -29,6 +30,7 @@ public class WelcomeScreenTests extends BaseTests {
 
     @MethodSource("methodSourceWelcomeScreensContentTest")
     @ParameterizedTest
+    @DisplayName("Проверка текста {0} экрана приветствия")
     public void welcomeScreensContentTest(int screenNumber, String heading, String text){
         step("Тап на навигационную точку {0} слайда", () -> {
             $(AppiumBy.xpath("//android.widget.HorizontalScrollView[@content-desc='Page 1 of 4']/android.widget.LinearLayout" +
@@ -47,6 +49,7 @@ public class WelcomeScreenTests extends BaseTests {
     })
 
     @ParameterizedTest
+    @DisplayName("Проверка загрузки изображений на слайде {0} экрана приветствия")
     public void welcomeScreensPicturesDisplayed(int screenNumber){
         step("Тап на навигационную точку {0} слайда", () -> {
             $(AppiumBy.xpath("//android.widget.HorizontalScrollView[@content-desc='Page 1 of 4']/android.widget.LinearLayout" +

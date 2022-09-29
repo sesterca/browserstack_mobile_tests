@@ -2,6 +2,7 @@ package tests;
 
 import com.codeborne.selenide.CollectionCondition;
 import io.appium.java_client.AppiumBy;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.*;
@@ -10,6 +11,7 @@ import static io.qameta.allure.Allure.step;
 public class SearchPageTests extends BaseTests{
 
     @Test
+    @DisplayName("Проверка поиска по статьям")
     public void searchTest(){
         back();
 

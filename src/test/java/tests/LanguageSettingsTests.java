@@ -3,6 +3,7 @@ package tests;
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
 import io.appium.java_client.AppiumBy;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -17,6 +18,7 @@ import static io.qameta.allure.Allure.step;
 public class LanguageSettingsTests extends BaseTests {
 
     @Test
+    @DisplayName("Проверка добавления русского языка")
     public void addLanguageTest(){
         step("Тап на Add or edit languages", () -> {
             $(AppiumBy.id("addLangContainer")).click();
@@ -42,6 +44,7 @@ public class LanguageSettingsTests extends BaseTests {
 
     @MethodSource("methodSourceSearchLanguageTest")
     @ParameterizedTest
+    @DisplayName("Проверка поиска языка в справочнике")
     public void searchForLanguageTest(String language, int numberOfSearchResults){
         step("Тап на Add or edit languages", () -> {
             $(AppiumBy.id("addLangContainer")).click();

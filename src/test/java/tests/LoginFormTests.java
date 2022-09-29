@@ -3,6 +3,7 @@ package tests;
 import com.codeborne.selenide.Condition;
 import com.github.javafaker.Faker;
 import io.appium.java_client.AppiumBy;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -17,6 +18,7 @@ public class LoginFormTests extends BaseTests {
     Faker faker = new Faker();
 
     @Test
+    @DisplayName("Проверка показа капчи при регистрации")
     public void registerThroughCaptchaTest(){
 
         String password = faker.internet().password();
@@ -54,6 +56,7 @@ public class LoginFormTests extends BaseTests {
     }
 
     @Test
+    @DisplayName("Проверка видимости пароля после тапа на значок глаза")
     public void showPasswordByClickOnEyeTest(){
 
         String password = faker.internet().password();
@@ -80,6 +83,7 @@ public class LoginFormTests extends BaseTests {
     }
 
     @Test
+    @DisplayName("Проверка авторизации")
     public void loginTest(){
         back();
         step("Тап на More в меню", () -> {
