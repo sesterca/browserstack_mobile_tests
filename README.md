@@ -1,5 +1,5 @@
 # Тестирование мобильного приложения Wikipedia
-[![wikipedia](img src="image/Wikipedia-logo.png")](https://github.com/wikimedia/apps-android-wikipedia/releases/download/latest/app-alpha-universal-release.apk)
+<img src="image/Wikipedia-logo.png">(https://github.com/wikimedia/apps-android-wikipedia/releases/download/latest/app-alpha-universal-release.apk)
 
 >*Добро пожаловать в Википедию, свободную энциклопедию, которую может редактировать каждый. [(c)](https://ru.wikipedia.org/wiki).* 
 
