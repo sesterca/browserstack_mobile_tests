@@ -1,5 +1,7 @@
 # Тестирование мобильного приложения Wikipedia
-[<img src="image/Wikipedia-logo.png">](https://github.com/wikimedia/apps-android-wikipedia/releases/download/latest/app-alpha-universal-release.apk) *Добро пожаловать в Википедию, свободную энциклопедию, которую может редактировать каждый. [(c)](https://ru.wikipedia.org/wiki).* 
+[<img src="image/Wikipedia-logo.png">](https://github.com/wikimedia/apps-android-wikipedia/releases/download/latest/app-alpha-universal-release.apk) 
+
+*Добро пожаловать в Википедию, свободную энциклопедию, которую может редактировать каждый. [(c)](https://ru.wikipedia.org/wiki).* 
 
 
 ### В проекте протестировано :mag_right:
@@ -23,15 +25,16 @@ gradle clean test -DdeviceHost=emulation
 ### удаленно в Jenkins :desktop_computer:
 ```
 gradle clean test
--DdeviceHost=${host}
+-DdeviceHost=browserstack
 ```
 [Пример сборки](https://jenkins.autotests.cloud/job/012-sesterca-u13_employee_naumen_website/13/)
 Открыть [Jenkins](https://jenkins.autotests.cloud/job/012-sesterca-u13_employee_naumen_website), в меню слева выбрать ```Собрать с параметрами```
 
 ## Для просмотра отчета
 Под названием проекта кликнуть [<img src="image/Allure_Report.svg" width="50">](https://jenkins.autotests.cloud/job/012-sesterca-u13_employee_naumen_website/allure/)
-#### Главный экран отчета
-<img src="image/allure trend.jpg">
+#### Главный экран отчета Browserstack
+<img src="image/image/browserstack_screenshot.jpg">
+<img src="image/image/image/browserstack_app_profiling.jpg">
 
 #### Экран подробного просмотра тестов тест-сьюта
 <img src="image/allure tests.jpg">
