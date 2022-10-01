@@ -25,6 +25,11 @@ public class BaseTests {
     @BeforeAll
     public static void setup(){
 
+        if (Objects.equals(deviceHost, "browserstack")) {
+            Configuration.browser = BrowserstackMobileDriver.class.getName();
+        } else {
+            Configuration.browser = EmulationMobileDriver.class.getName();}
+
         Configuration.browser = BrowserstackMobileDriver.class.getName();
         Configuration.browserSize = null;
     }

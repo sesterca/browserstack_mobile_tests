@@ -2,7 +2,7 @@ package configuration;
 
 import org.aeonbits.owner.Config;
 
-@Config.LoadPolicy(Config.LoadType.FIRST)
+@Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
         "system:properties",
         "classpath:emulation.properties"})
