@@ -30,7 +30,6 @@ public class BaseTests {
         } else {
             Configuration.browser = EmulationMobileDriver.class.getName();}
 
-        Configuration.browser = BrowserstackMobileDriver.class.getName();
         Configuration.browserSize = null;
     }
 
