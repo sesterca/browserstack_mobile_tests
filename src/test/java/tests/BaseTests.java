@@ -22,14 +22,15 @@ public class BaseTests {
 
     public static String deviceHost = System.getProperty("deviceHost", "browserstack");
 
+
     @BeforeAll
     public static void setup(){
 
-//        if (Objects.equals(deviceHost, "browserstack")) {
-//            Configuration.browser = BrowserstackMobileDriver.class.getName();
-//        } else {
-//            Configuration.browser = EmulationMobileDriver.class.getName();}
-        Configuration.browser = BrowserstackMobileDriver.class.getName();
+        if (Objects.equals(deviceHost, "browserstack")) {
+            Configuration.browser = BrowserstackMobileDriver.class.getName();
+        } else {
+            Configuration.browser = EmulationMobileDriver.class.getName();}
+
         Configuration.browserSize = null;
     }
 

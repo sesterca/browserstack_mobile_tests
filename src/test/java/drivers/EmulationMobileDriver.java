@@ -1,11 +1,9 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import configuration.EmulationConfig;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.remote.AutomationName;
-import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 
@@ -15,11 +13,10 @@ import java.io.InputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import static configuration.ConfigProperties.emulationConfig;
 import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class EmulationMobileDriver implements WebDriverProvider {
-
-    static EmulationConfig emulationConfig = ConfigFactory.create(EmulationConfig.class, System.getProperties());
 
     public static URL getAppiumServerUrl() {
         try {
