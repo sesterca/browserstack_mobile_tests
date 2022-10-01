@@ -40,7 +40,7 @@ gradle clean test
 <img src="image/allure tests.jpg">
 
 #### Пример выполнения теста
-![test_pass](https://user-images.githubusercontent.com/71780020/173231412-7821c04d-3a8f-4513-bd02-c8eaa5179f64.gif)
+![test_pass](<img src="image/browserstack_add_language.gif">)
 
 ## Для уведомления о результатах тестирования
-<img src="image/browserstack_add_language.gif">
+<img src="">
