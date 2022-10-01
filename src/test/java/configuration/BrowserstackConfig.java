@@ -2,10 +2,7 @@ package configuration;
 
 import org.aeonbits.owner.Config;
 
-@Config.LoadPolicy(Config.LoadType.MERGE)
-@Config.Sources({
-        "system:properties",
-        "classpath:browserstack.properties"})
+@Config.Sources({"classpath:browserstack.properties"})
 public interface BrowserstackConfig extends Config {
 
     @Key("user")
