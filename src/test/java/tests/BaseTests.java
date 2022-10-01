@@ -20,12 +20,10 @@ import static io.qameta.allure.Allure.step;
 
 public class BaseTests {
 
-    public static String deviceHost;
+    public static String deviceHost = System.getProperty("deviceHost", "browserstack");
 
     @BeforeAll
     public static void setup(){
-
-        deviceHost = System.getProperty("deviceHost");
 
         if (Objects.equals(deviceHost, "browserstack")) {
             Configuration.browser = BrowserstackMobileDriver.class.getName();
