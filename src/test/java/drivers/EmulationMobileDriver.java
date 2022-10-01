@@ -1,7 +1,7 @@
 package drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import configuration.MobileConfig;
+import configuration.EmulationConfig;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.remote.AutomationName;
@@ -19,11 +19,11 @@ import static org.apache.commons.io.FileUtils.copyInputStreamToFile;
 
 public class EmulationMobileDriver implements WebDriverProvider {
 
-    static MobileConfig mobileConfig = ConfigFactory.create(MobileConfig.class, System.getProperties());
+    static EmulationConfig emulationConfig = ConfigFactory.create(EmulationConfig.class, System.getProperties());
 
     public static URL getAppiumServerUrl() {
         try {
-            return new URL(mobileConfig.url());
+            return new URL(emulationConfig.url());
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
@@ -37,8 +37,8 @@ public class EmulationMobileDriver implements WebDriverProvider {
         options.merge(capabilities);
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);
         options.setPlatformName("Android");
-        options.setDeviceName(mobileConfig.device());
-        options.setPlatformVersion(mobileConfig.os());
+        options.setDeviceName(emulationConfig.device());
+        options.setPlatformVersion(emulationConfig.os());
         options.setApp(app.getAbsolutePath());
         options.setAppPackage("org.wikipedia.alpha");
         options.setAppActivity("org.wikipedia.main.MainActivity");

@@ -1,6 +1,7 @@
 package helpers;
 
-import configuration.MobileConfig;
+import configuration.BrowserstackConfig;
+import configuration.EmulationConfig;
 import org.aeonbits.owner.ConfigFactory;
 
 import static io.restassured.RestAssured.given;
@@ -8,7 +9,7 @@ import static java.lang.String.format;
 
 public class Browserstack {
 
-    static MobileConfig config = ConfigFactory.create(MobileConfig.class, System.getProperties());
+    static BrowserstackConfig config = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
 
     public static String videoUrl(String sessionId){
         String url = format("https://api.browserstack.com/app-automate/sessions/%s.json", sessionId);
