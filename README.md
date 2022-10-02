@@ -35,7 +35,7 @@ gradle clean test
 <img src="image/browserstack_app_profiling.jpg">
 
 ## Для просмотра отчета
-Под названием проекта кликнуть [<img src="image/Allure_Report.svg" width="17">](https://jenkins.autotests.cloud/job/012-sesterca-u13_employee_naumen_website/allure/)
+Под названием проекта кликнуть [<img src="image/Allure_Report.svg" width="17">]
 
 #### Экраны просмотра отчета о прохождении тестов Allure
 <img src="image/Browserstack_allure_main.jpg">
