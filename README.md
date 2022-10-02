@@ -30,11 +30,12 @@ gradle clean test
 [Пример сборки](https://jenkins.autotests.cloud/job/012-sesterca-u21-browserstack_mobile_tests/35/)
 Открыть [Jenkins](https://jenkins.autotests.cloud/job/012-sesterca-u21-browserstack_mobile_tests/), в меню слева выбрать ```Собрать с параметрами```
 
-## Для просмотра отчета
-Под названием проекта кликнуть [<img src="image/Allure_Report.svg" width="50">](https://jenkins.autotests.cloud/job/012-sesterca-u13_employee_naumen_website/allure/)
 #### Главный экран отчета Browserstack
 <img src="image/browserstack_screenshot.jpg">
-<img src="image/image/browserstack_app_profiling.jpg">
+<img src="image/browserstack_app_profiling.jpg">
+
+## Для просмотра отчета
+Под названием проекта кликнуть [<img src="image/Allure_Report.svg" width="20">](https://jenkins.autotests.cloud/job/012-sesterca-u13_employee_naumen_website/allure/)
 
 #### Экраны просмотра отчета о прохождении тестов Allure
 <img src="image/Browserstack_allure_main.jpg">
