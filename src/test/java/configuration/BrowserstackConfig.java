@@ -14,7 +14,6 @@ public interface BrowserstackConfig extends Config {
     @Key("app")
     String browserStackApp();
 
-    @Key("device")
     String device();
 
     @Key("os_version")
